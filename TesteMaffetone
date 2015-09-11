@@ -22,14 +22,8 @@ public class TesteMaffetone {
 
     @Test
     public void testeMaffetone_1() {
-        Assert.assertEquals(122, biblioteca.calculoMaffetoneMax(48, 1));
-        Assert.assertEquals(112, biblioteca.calculoMaffetoneMin(48, 1));
-    }
-
-    @Test
-    public void testeMaffetone_2() {
-        Assert.assertEquals(145, biblioteca.calculoMaffetoneMax(35, 3));
-        Assert.assertEquals(135, biblioteca.calculoMaffetoneMin(35, 3));
+        Assert.assertEquals(132, biblioteca.calculoMaffetoneBasico(48));
+        Assert.assertEquals(145, biblioteca.calculoMaffetoneBasico(35));
     }
 
 }
