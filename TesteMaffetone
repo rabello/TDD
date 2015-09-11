@@ -1,0 +1,35 @@
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+/**
+ *
+ * @author patati
+ */
+public class TesteMaffetone {
+
+    private Util.Biblioteca biblioteca;
+
+    @Before
+    public void inicializar() {
+        biblioteca = new Util.Biblioteca();
+    }
+
+    @Test
+    public void testeMaffetone_1() {
+        Assert.assertEquals(122, biblioteca.calculoMaffetoneMax(48, 1));
+        Assert.assertEquals(112, biblioteca.calculoMaffetoneMin(48, 1));
+    }
+
+    @Test
+    public void testeMaffetone_2() {
+        Assert.assertEquals(145, biblioteca.calculoMaffetoneMax(35, 3));
+        Assert.assertEquals(135, biblioteca.calculoMaffetoneMin(35, 3));
+    }
+
+}
