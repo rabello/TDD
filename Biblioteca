@@ -5,9 +5,34 @@ package Util;
  * @author patati
  */
 public class Biblioteca {
-    
+
     public int calculoMaffetoneBasico(int idade) {
-        return 180 - idade;        
+        return 180 - idade;
     }
-    
+
+    public int calculoMaffetoneMax(int idade, int fator) {
+        return calc(idade, fator);
+    }
+
+    public int calculoMaffetoneMin(int idade, int fator) {
+        return calc(idade, fator) - 10;
+
+    }
+
+    private int calc(int idade, int fator) {
+        idade = calculoMaffetoneBasico(idade);
+        switch (fator) {
+            case 1:
+                return idade - 10;
+            case 2:
+                return idade - 5;
+            case 3:
+                return idade;
+            case 4:
+                return idade + 5;
+            default:
+                return 0;
+        }
+    }
+
 }
