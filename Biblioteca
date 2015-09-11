@@ -1,0 +1,45 @@
+package Util;
+
+/**
+ *
+ * @author patati
+ */
+public class Biblioteca {
+    
+    
+    public int calculoMaffetoneMax(int idade, int c) {
+        final int maffetone = 180 - idade;
+        
+        switch (c) {
+            case 1:
+                return maffetone - 10;
+            case 2:
+                return maffetone - 5;
+            case 3:
+                return maffetone;
+            case 4:
+                return maffetone + 5;
+            default:
+                return 0;
+        }
+        
+    }
+    
+    public int calculoMaffetoneMin(int idade, int c) {
+        final int maffetone = 180 - idade - 10;
+        
+        switch (c) {
+            case 1:
+                return maffetone - 10;
+            case 2:
+                return maffetone - 5;
+            case 3:
+                return maffetone;
+            case 4:
+                return maffetone + 5;
+            default:
+                return 0;
+        }
+    }
+    
+}
