@@ -19,19 +19,35 @@ public class TesteMaffetone {
     public void inicializar() {
         biblioteca = new Util.Biblioteca();
     }
+    
+    @Test
+    public void testeMaffetoneBasico_01() {
+        Assert.assertEquals(132, biblioteca.calculoMaffetoneBasico(48));
+    }
+    
+    @Test
+    public void testeMaffetoneBasico_02() {
+        Assert.assertEquals(145, biblioteca.calculoMaffetoneBasico(35));
+    }
+    
+    @Test
+    public void testeMaffetoneCasoA_Max() {
+        Assert.assertEquals(122, biblioteca.calculoMaffetoneMax(48, 1));
+    }
+    
+    @Test
+    public void testeMaffetoneCasoA_Min() {
+        Assert.assertEquals(112, biblioteca.calculoMaffetoneMin(48, 1));
+    }  
 
     @Test
-    public void testeMaffetone_1() {
-        Assert.assertEquals(132, biblioteca.calculoMaffetoneBasico(48));
-        Assert.assertEquals(145, biblioteca.calculoMaffetoneBasico(35));
-        
-        
-        Assert.assertEquals(180-35, biblioteca.calculoMaffetoneMax(35,3));
-        Assert.assertEquals(180-35-10, biblioteca.calculoMaffetoneMin(35,3));
-        
-        Assert.assertEquals(180-27, biblioteca.calculoMaffetoneMax(27,3));
-        Assert.assertEquals(180-27-10, biblioteca.calculoMaffetoneMin(27,3));        
-        
+    public void testeMaffetoneCasoB_Max() {
+        Assert.assertEquals(127, biblioteca.calculoMaffetoneMax(48, 2));
+    }
+    
+    @Test
+    public void testeMaffetoneCasoB_Min() {
+        Assert.assertEquals(117, biblioteca.calculoMaffetoneMin(48, 2));
     }
 
 }
